@@ -372,6 +372,33 @@ a { color: var(--accent); text-decoration: none; }
 .code-panel__block.is-active { display: block; }
 .c-comment { color: var(--muted); }
 
+/* ---------- QR ---------- */
+.qr {
+  display: flex;
+  gap: 22px;
+  align-items: center;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 22px 26px;
+  margin-bottom: 30px;
+  max-width: 560px;
+}
+.qr img {
+  border-radius: 10px;
+  background: #fff;
+  padding: 8px;
+  flex-shrink: 0;
+}
+.qr h3 { font-size: 1.05rem; margin-bottom: 6px; }
+.qr p { color: var(--muted); font-size: 0.92rem; margin-bottom: 10px; }
+.qr code {
+  font-family: var(--mono);
+  font-size: 0.82rem;
+  color: var(--accent);
+  word-break: break-all;
+}
+
 /* ---------- Resources ---------- */
 .resources__list { list-style: none; margin-bottom: 26px; display: grid; gap: 12px; }
 .resources__list li {
