@@ -11,6 +11,13 @@
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
+  <script>
+    (function () {
+      var unlocked = window.sessionStorage && sessionStorage.getItem("guion-unlocked") === "1";
+      document.body.classList.add("is-locked");
+      if (unlocked) document.body.classList.remove("is-locked");
+    })();
+  </script>
   <header class="navbar">
     <div class="container navbar__inner">
       <a href="index.html" class="navbar__brand">
@@ -279,5 +286,53 @@
   </footer>
 
   <script src="assets/js/main.js"></script>
+  <div class="gate" id="gate" role="dialog" aria-modal="true" aria-labelledby="gateTitle">
+    <div class="gate__card">
+      <span class="gate__icon">🔒</span>
+      <h2 id="gateTitle">Área protegida</h2>
+      <p>Esta página es solo para el expositor. Ingresa la contraseña para ver el guion.</p>
+      <form id="gateForm" autocomplete="off">
+        <input class="gate__input" type="password" id="gatePassword" placeholder="Contraseña" autofocus />
+        <p class="gate__error" id="gateError">Contraseña incorrecta, inténtalo de nuevo.</p>
+        <button class="btn btn--primary gate__btn" type="submit">Entrar</button>
+        <p class="gate__hint"><a href="index.html">← Volver a la página principal</a></p>
+      </form>
+    </div>
+  </div>
+  <script>
+    (function () {
+      var HASH = "4ba4c898ef846f896501be315571e4ef645a004684131c5eace11c5f7c25c041";
+      function sha256(text) {
+        return crypto.subtle.digest("SHA-256", new TextEncoder().encode(text)).then(function (buf) {
+          var bytes = new Uint8Array(buf);
+          var hex = "";
+          for (var i = 0; i < bytes.length; i++) hex += bytes[i].toString(16).padStart(2, "0");
+          return hex;
+        });
+      }
+      var form = document.getElementById("gateForm");
+      var pwd = document.getElementById("gatePassword");
+      var err = document.getElementById("gateError");
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        var value = pwd.value;
+        if (!value) return;
+        sha256(value.toLowerCase()).then(function (hash) {
+          if (hash === HASH) {
+            if (window.sessionStorage) sessionStorage.setItem("guion-unlocked", "1");
+            document.body.classList.remove("is-locked");
+            pwd.value = "";
+          } else {
+            err.classList.add("is-shown");
+            pwd.value = "";
+            pwd.focus();
+          }
+        });
+      });
+      if (window.sessionStorage && sessionStorage.getItem("guion-unlocked") === "1") {
+        document.body.classList.remove("is-locked");
+      }
+    })();
+  </script>
 </body>
 </html>

@@ -61,6 +61,7 @@
   var detailsClose = document.getElementById("detailsClose");
   var navLinks = document.querySelectorAll("[data-detail]");
 
+  if (detailsClose && detailsContent) {
   function renderPrompt(promptText) {
     var esc = promptText.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
     return '<pre><code><span class="c-prompt">you&gt;</span> ' + esc + "</code></pre>";
@@ -93,6 +94,7 @@
   document.addEventListener("keydown", function (e) {
     if (e.key === "Escape") detailsEl.classList.remove("is-open");
   });
+  }
 
   var tabs = document.querySelectorAll(".code-panel__tab");
   var blocks = document.querySelectorAll(".code-panel__block");
