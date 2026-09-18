@@ -32,9 +32,11 @@ opencode "explica qué hace este archivo paso a paso"
 ```
 A-seminario-opencode/
 ├── index.html          # Página principal del seminario
+├── guion.html          # Guion del expositor (monólogo, sabías qué, noticias, frases)
 ├── assets/
 │   ├── css/style.css   # Estilos (diseño oscuro moderno)
-│   └── js/main.js      # Interactividad (actividades, tabs, copiar, menú)
+│   ├── js/main.js      # Interactividad (actividades, tabs, copiar, menú)
+│   └── img/qr.png      # Código QR de acceso móvil al sitio
 └── README.md
 ```
 
