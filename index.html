@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Seminario opencode · IESTP Churcampa</title>
+  <meta name="description" content="Presentación del seminario sobre opencode para estudiantes de educación superior del IESTP Churcampa. 5 actividades con opencode." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="container navbar__inner">
+      <a href="#inicio" class="navbar__brand">
+        <span class="navbar__logo">&gt;_</span>
+        <span>opencode <small>· seminario</small></span>
+      </a>
+      <button class="navbar__toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="navbar__links" id="menu">
+        <a href="#inicio">Inicio</a>
+        <a href="#que-es">¿Qué es?</a>
+        <a href="#actividades">Actividades</a>
+        <a href="#comandos">Comandos</a>
+        <a href="#recursos">Recursos</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="container hero__inner">
+        <p class="hero__tag">Seminario de herramientas inteligentes · IESTP CHURCAMPA</p>
+        <h1 class="hero__title">Programa con <span class="grad">opencode</span>,<br />tu asistente en la terminal</h1>
+        <p class="hero__subtitle">
+          Cinco actividades prácticas para que los estudiantes de educación superior aprendan a desarrollar
+          software real con la ayuda de un asistente de código (IA).
+        </p>
+        <div class="hero__actions">
+          <a href="#actividades" class="btn btn--primary">Ver las 5 actividades</a>
+          <a href="#que-es" class="btn btn--ghost">¿Qué es opencode?</a>
+        </div>
+        <div class="hero__terminal">
+          <div class="terminal__bar">
+            <span class="terminal__dot terminal__dot--red"></span>
+            <span class="terminal__dot terminal__dot--yellow"></span>
+            <span class="terminal__dot terminal__dot--green"></span>
+            <span class="terminal__title">opencode — sesión de demostración</span>
+          </div>
+          <div class="terminal__body">
+            <p><span class="prompt">estudiante@iestp-churcampa:~$</span> <span class="cmd">opencode</span></p>
+            <p class="out">Bienvenido, estudiante. ¿Qué quieres construir hoy?</p>
+            <p><span class="prompt">you&gt;</span> Quiero crear mi portafolio web</p>
+            <p class="out typing"><span class="cursor"></span> Creando archivos index.html, style.css y script.js…</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="que-es">
+      <div class="container">
+        <p class="section__label">Introducción</p>
+        <h2 class="section__title">¿Qué es opencode?</h2>
+        <p class="section__lead">
+          opencode es un asistente de inteligencia artificial que trabaja dentro de tu terminal.
+          Conversas con él en lenguaje natural y <strong>él crea, lee, modifica y ejecuta tu código</strong>, directamente en tu proyecto.
+        </p>
+        <div class="features">
+          <article class="feature">
+            <span class="feature__icon">💬</span>
+            <h3>Conversación natural</h3>
+            <p>Le pides algo con tus palabras y él lo transforma en código funcional.</p>
+          </article>
+          <article class="feature">
+            <span class="feature__icon">📁</span>
+            <h3>Entiende tu proyecto</h3>
+            <p>Lee la estructura real de tus archivos y propone cambios coherentes.</p>
+          </article>
+          <article class="feature">
+            <span class="feature__icon">▶️</span>
+            <h3>Ejecuta lo necesario</h3>
+            <p>Instala dependencias, corre tu programa e incluso ejecuta pruebas.</p>
+          </article>
+          <article class="feature">
+            <span class="feature__icon">🔒</span>
+            <h3>Tú tienes el control</h3>
+            <p>Tú decides qué aceptar y qué descartar. Aprende revisando cada cambio.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="actividades">
+      <div class="container">
+        <p class="section__label">Práctica guiada</p>
+        <h2 class="section__title">Las 5 actividades</h2>
+        <p class="section__lead">
+          Cada actividad es cada vez más desafiante. Haz clic en el botón ➜ para ver los comandos y pasos.
+        </p>
+
+        <div class="activities">
+          <article class="activity">
+            <div class="activity__num">01</div>
+            <div class="activity__body">
+              <h3>Mi primera página web</h3>
+              <p>Crea un portafolio personal (sobre ti, tus estudios y tus intereses) con HTML, CSS y JavaScript desde cero.</p>
+              <button class="btn btn--sm" data-detail="act1">➜ Ver pasos y comandos</button>
+            </div>
+          </article>
+
+          <article class="activity">
+            <div class="activity__num">02</div>
+            <div class="activity__body">
+              <h3>Resolver ejercicios de programación</h3>
+              <p>Pide a opencode resolver algoritmos en Python (condicionales, ciclos, funciones) y que te explique cómo funciona cada línea.</p>
+              <button class="btn btn--sm" data-detail="act2">➜ Ver pasos y comandos</button>
+            </div>
+          </article>
+
+          <article class="activity">
+            <div class="activity__num">03</div>
+            <div class="activity__body">
+              <h3>Explicar y documentar código</h3>
+              <p>Pega un código (tuyo o de un ejemplo) y pide que lo explique paso a paso y lo documente con comentarios claros.</p>
+              <button class="btn btn--sm" data-detail="act3">➜ Ver pasos y comandos</button>
+            </div>
+          </article>
+
+          <article class="activity">
+            <div class="activity__num">04</div>
+            <div class="activity__body">
+              <h3>Probar y corregir errores</h3>
+              <p>Introduce un programa con errores (bugs) y deja que opencode los encuentre, los explique y escriba pruebas para verificarlos.</p>
+              <button class="btn btn--sm" data-detail="act4">➜ Ver pasos y comandos</button>
+            </div>
+          </article>
+
+          <article class="activity">
+            <div class="activity__num">05</div>
+            <div class="activity__body">
+              <h3>Proyecto integrador: gestor de tareas</h3>
+              <p>Construye una aplicación completa (lista de tareas con guardado en el navegador) desde la idea hasta el resultado final.</p>
+              <button class="btn btn--sm" data-detail="act5">➜ Ver pasos y comandos</button>
+            </div>
+          </article>
+        </div>
+
+        <div class="details" id="details">
+          <button class="details__close" id="detailsClose" aria-label="Cerrar">✕</button>
+          <div id="detailsContent"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="comandos">
+      <div class="container">
+        <p class="section__label">Referencia rápida</p>
+        <h2 class="section__title">Comandos que usarás hoy</h2>
+        <p class="section__lead">Copia cada comando con un clic para usarlo en tu terminal.</p>
+
+        <div class="code-panel" id="codePanel">
+          <div class="code-panel__tabs">
+            <button class="code-panel__tab is-active" data-tab="opencode">opencode</button>
+            <button class="code-panel__tab" data-tab="git">Git</button>
+          </div>
+          <pre class="code-panel__block is-active" data-block="opencode"><code><span class="c-comment"># Iniciar una sesión con opencode en tu proyecto</span>
+opencode
+
+<span class="c-comment"># Pedir que cree un archivo nuevo</span>
+opencode "crea index.html con HTML básico"
+
+<span class="c-comment"># Explicar el código de un archivo</span>
+opencode "explica qué hace este archivo paso a paso"</code></pre>
+          <pre class="code-panel__block" data-block="git"><code><span class="c-comment"># Iniciar un repositorio en la carpeta actual</span>
+git init
+
+<span class="c-comment"># Ver los cambios pendientes</span>
+git status
+
+<span class="c-comment"># Guardar una versión del proyecto</span>
+git add .
+git commit -m "Mi primer proyecto"
+
+<span class="c-comment"># Subir a GitHub</span>
+git push -u origin main</code></pre>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="recursos">
+      <div class="container resources">
+        <p class="section__label">Para continuar después del seminario</p>
+        <h2 class="section__title">Recursos y desafíos extra</h2>
+        <ul class="resources__list">
+          <li>Desafío ⭐: convertir tu portafolio en una página con tema claro/oscuro.</li>
+          <li>Desafío ⭐⭐: crear una calculadora científica con opencode.</li>
+          <li>Desafío ⭐⭐⭐: hacer un mini sistema de registro de notas (HTML + JS).</li>
+          <li>Sube cada proyecto a GitHub con Git y compártelo en tu portafolio.</li>
+        </ul>
+        <p class="resources__note">
+          💡 Consejo: opencode potencia tu aprendizaje, pero <strong>revisa siempre lo que hace</strong>.
+          Entender cada línea es la mejor forma de volverte un buen programador.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p><strong>Seminario opencode</strong> · IESTP Churcampa · Estudiantes de educación superior</p>
+      <p class="footer__sub">Proyecto creado y subido a GitHub como material de la presentación.</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
